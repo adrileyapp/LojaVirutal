@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Ofertas } from "../Entidades/Ofertas";
 
 @Injectable()
 export class OfertasService {
 
-  public ofertas: Array<any> =  [
+  private  ofertas: Array<Ofertas> =  [
     {
       id: 1,
       categoria: 'restaurante',
@@ -50,8 +51,12 @@ export class OfertasService {
         {url: '/assets/ofertas/3/img5.jpg'},
         {url: '/assets/ofertas/3/img6.jpg'}
       ]
-    }
+    },
+
   ];
- // constructor() { }
+ public GetOfertas():Array<Ofertas>{
+  return this.ofertas;
+
+ }
 
 }
